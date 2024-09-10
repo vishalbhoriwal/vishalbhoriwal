@@ -9,4 +9,4 @@ Only thing worth doing is impossible
 * I worked at Cimpress.
 * Want to connect [https://www.linkedin.com/in/vishalbhoriwal]
 * I can create bugs in Js, Ts, React, Next, Node, Rust
-* I can crash server of AWS 😎
+* I can crash server of AWS by deployement 😎
