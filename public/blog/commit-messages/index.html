@@ -5,31 +5,37 @@
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Archive | Vishal Bhoriwal</title>
-<meta name="title" content="Archive" />
-<meta name="description" content="" />
+<title>On Writing Good Commit Messages | Vishal Bhoriwal</title>
+<meta name="title" content="On Writing Good Commit Messages" />
+<meta name="description" content="A commit message is a letter to your future self. Make it worth reading." />
 <meta name="keywords" content="" />
 
 
-<meta property="og:url" content="https://vishalbhoriwal.dev/archive/">
+<meta property="og:url" content="https://vishalbhoriwal.dev/blog/commit-messages/">
   <meta property="og:site_name" content="Vishal Bhoriwal">
-  <meta property="og:title" content="Archive">
-  <meta property="og:description" content="Thoughts on software, tech and life by Vishal Bhoriwal.">
+  <meta property="og:title" content="On Writing Good Commit Messages">
+  <meta property="og:description" content="A commit message is a letter to your future self. Make it worth reading.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-02-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-02-10T00:00:00+00:00">
 
 
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Archive">
-  <meta name="twitter:description" content="Thoughts on software, tech and life by Vishal Bhoriwal.">
+  <meta name="twitter:title" content="On Writing Good Commit Messages">
+  <meta name="twitter:description" content="A commit message is a letter to your future self. Make it worth reading.">
 
 
 
 
-  <meta itemprop="name" content="Archive">
-  <meta itemprop="description" content="Thoughts on software, tech and life by Vishal Bhoriwal.">
+  <meta itemprop="name" content="On Writing Good Commit Messages">
+  <meta itemprop="description" content="A commit message is a letter to your future self. Make it worth reading.">
+  <meta itemprop="datePublished" content="2024-02-10T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-02-10T00:00:00+00:00">
+  <meta itemprop="wordCount" content="169">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <style>
@@ -215,35 +221,67 @@
 </nav>
 </header>
   <main>
-<h1>Archive</h1>
+
+<h1>On Writing Good Commit Messages</h1>
+<p>
+  <i>
+    <time datetime='2024-02-10'>
+      2024-02-10
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>A commit message is a letter to your future self. Make it worth reading.</p>
+<h2 id="the-problem-with-bad-commits">The Problem with Bad Commits</h2>
+<p>We&rsquo;ve all seen them:</p>
+<pre tabindex="0"><code>fix
+wip
+asdf
+final final FINAL
+</code></pre><p>These tell you nothing. Six months later, when a bug surfaces and you&rsquo;re spelunking through <code>git log</code>, these are useless noise.</p>
+<h2 id="the-rule-of-thumb">The Rule of Thumb</h2>
+<p>The subject line of a commit should complete this sentence:</p>
+<blockquote>
+<p><em>If applied, this commit will&hellip;</em></p>
+</blockquote>
+<p>So: &ldquo;Add input validation to login form&rdquo; rather than &ldquo;validation stuff&rdquo;.</p>
+<h2 id="structure">Structure</h2>
+<p>A good commit:</p>
+<ol>
+<li><strong>Subject</strong> — 50 chars or less, imperative mood, no period</li>
+<li><strong>Blank line</strong></li>
+<li><strong>Body</strong> (optional) — explain <em>what</em> and <em>why</em>, not <em>how</em></li>
+</ol>
+<pre tabindex="0"><code>Add rate limiting to the auth endpoint
+
+Without this, a single IP could spam login attempts indefinitely.
+Uses a sliding window of 10 requests per minute per IP, backed by Redis.
+</code></pre><h2 id="why-it-matters">Why It Matters</h2>
+<p>The diff shows <em>what</em> changed. The commit message explains <em>why</em>. Both together are what make a codebase navigable years later.</p>
+<p>Treat your commit history like documentation — because it is.</p>
+
+</content>
+
+<div style="font-size:0.8em;display:flex;gap:16px;justify-content:center;">
+  <p>
+    
+    <a href="https://vishalbhoriwal.dev/blog/hello-world/">
+      &lt;&lt; Previous Post</a>
+        
+  </p>
+  <p>|</p>
+  <p>
+    
+    <a href="https://vishalbhoriwal.dev/blog/simplicity/">Next Post >></a>
+    
+  </p>
+</div>
 
 
-
-
-
-<h2>2024</h2>
-<ul>
+<p>
   
-  <li>
-    <span>Mar 20</span>
-    &mdash;
-    <a href="https://vishalbhoriwal.dev/blog/simplicity/">The Simplest Thing That Could Possibly Work</a>
-  </li>
-  
-  <li>
-    <span>Feb 10</span>
-    &mdash;
-    <a href="https://vishalbhoriwal.dev/blog/commit-messages/">On Writing Good Commit Messages</a>
-  </li>
-  
-  <li>
-    <span>Jan 15</span>
-    &mdash;
-    <a href="https://vishalbhoriwal.dev/blog/hello-world/">Hello World — Starting This Blog</a>
-  </li>
-  
-</ul>
-
+</p>
 
   </main>
   <footer>Made with <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>

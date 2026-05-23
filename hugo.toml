@@ -10,9 +10,6 @@ enableRobotsTXT = true
 disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 
-[permalinks]
-  blog = "/:slug/"
-
 [params]
   description    = "Thoughts on software, tech and life by Vishal Bhoriwal."
   dateFormat     = "2006-01-02"
