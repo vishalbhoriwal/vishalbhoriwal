@@ -4,7 +4,72 @@
     --font-secondary: monospace;
     --font-scale: 1.15em;
   }
+
+  /* Dark theme override class */
+  body.dark-theme {
+    --background-color: #01242e;
+    --heading-color: #eee;
+    --text-color: #ddd;
+    --link-color: #8cc2dd;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #ccc;
+  }
+
+  body.light-theme {
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  #theme-toggle {
+    background: none;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.9em;
+    color: var(--text-color);
+    cursor: pointer;
+    vertical-align: middle;
+  }
+
+  #theme-toggle:hover {
+    opacity: 0.7;
+  }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var btn = document.getElementById('theme-toggle');
+    var stored = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var isDark = stored === 'dark' || (!stored && prefersDark);
+
+    function applyTheme(dark) {
+      if (dark) {
+        document.body.classList.add('dark-theme');
+        document.body.classList.remove('light-theme');
+        btn.textContent = '☀️';
+        btn.title = 'Switch to light mode';
+      } else {
+        document.body.classList.add('light-theme');
+        document.body.classList.remove('dark-theme');
+        btn.textContent = '🌙';
+        btn.title = 'Switch to dark mode';
+      }
+    }
+
+    applyTheme(isDark);
+
+    btn.addEventListener('click', function () {
+      isDark = !isDark;
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      applyTheme(isDark);
+    });
+  });
+</script>
 
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ .Permalink }}">
