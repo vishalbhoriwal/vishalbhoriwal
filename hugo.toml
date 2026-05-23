@@ -1,0 +1,26 @@
+baseURL = 'https://vishalbhoriwal.dev/'
+locale   = 'en-us'
+title    = "Vishal Bhoriwal"
+author   = "Vishal Bhoriwal"
+theme    = 'hugo-bearblog'
+
+enableRobotsTXT = true
+
+# Bear Blog style: disable taxonomy kinds to keep URLs clean
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+
+[permalinks]
+  blog = "/:slug/"
+
+[params]
+  description    = "Thoughts on software, tech and life by Vishal Bhoriwal."
+  dateFormat     = "2006-01-02"
+  enablePostNavigator = true
+
+[markup]
+  [markup.highlight]
+    style              = 'friendly'
+    lineNos            = false
+    lineNumbersInTable = false
+    codeFences         = true

@@ -1,0 +1,19 @@
+{{ define "main" }}
+<h1>Archive</h1>
+
+{{ $posts := where .Site.RegularPages "Type" "blog" }}
+{{ $byYear := $posts.GroupByDate "2006" }}
+
+{{ range $byYear }}
+<h2>{{ .Key }}</h2>
+<ul>
+  {{ range .Pages }}
+  <li>
+    <span>{{ .Date.Format "Jan 02" }}</span>
+    &mdash;
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+{{ end }}

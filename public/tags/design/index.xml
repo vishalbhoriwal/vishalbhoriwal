@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design on Vishal Bhoriwal</title>
+    <link>http://localhost:1313/tags/design/</link>
+    <description>Recent content in Design on Vishal Bhoriwal</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Simplest Thing That Could Possibly Work</title>
+      <link>http://localhost:1313/the-simplest-thing-that-could-possibly-work/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/the-simplest-thing-that-could-possibly-work/</guid>
+      <description>&lt;p&gt;There&amp;rsquo;s a question from Extreme Programming that I keep returning to:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;What is the simplest thing that could possibly work?&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;It sounds almost naive. But it&amp;rsquo;s one of the most useful filters I&amp;rsquo;ve found when designing systems.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-complexity-trap&#34;&gt;The Complexity Trap&lt;/h2&gt;&#xA;&lt;p&gt;Engineers — myself included — tend to over-engineer. We anticipate scale, future requirements, and edge cases that may never materialize. We reach for distributed systems before we&amp;rsquo;ve saturated a single machine. We add abstraction layers before we have two concrete cases to abstract.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
