@@ -12,4 +12,4 @@ This is my corner of the internet where I write about software engineering, tech
 
 ---
 
-Browse my [blog](/blog/) posts, subscribe via [RSS](/index.xml), or read [about me](/about/).
+Browse my [blog](/blog/) posts, or subscribe via [RSS](/index.xml).
