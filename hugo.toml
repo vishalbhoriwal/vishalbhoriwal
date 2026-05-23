@@ -1,5 +1,4 @@
 baseURL = 'https://www.vishalbhoriwal.me/'
-locale   = 'en-us'
 title    = "Vishal Bhoriwal"
 author   = "Vishal Bhoriwal"
 theme    = 'hugo-bearblog'
@@ -12,8 +11,12 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [params]
   description    = "Thoughts on software, tech and life by Vishal Bhoriwal."
+  author         = "Vishal Bhoriwal"
   dateFormat     = "2006-01-02"
   enablePostNavigator = true
+
+  # SEO / Social
+  images         = ["/images/og-default.png"]
 
 [markup]
   [markup.highlight]
@@ -21,3 +24,8 @@ ignoreErrors = ["error-disable-taxonomy"]
     lineNos            = false
     lineNumbersInTable = false
     codeFences         = true
+
+[sitemap]
+  changefreq = "monthly"
+  filename   = "sitemap.xml"
+  priority   = 0.5

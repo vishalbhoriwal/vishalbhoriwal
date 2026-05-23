@@ -1,9 +1,12 @@
 +++
 title = "The Simplest Thing That Could Possibly Work"
 date = 2024-03-20
+lastmod = 2024-03-20
 draft = false
 slug = "simplicity"
 description = "A reminder to reach for complexity only when simplicity has genuinely failed."
+tags = ["software-engineering", "design", "engineering-philosophy"]
+author = "Vishal Bhoriwal"
 +++
 
 There's a question from Extreme Programming that I keep returning to:

@@ -1,9 +1,12 @@
 +++
 title = "The Uneven Ground We Stand On: Personal Reflections on Inequality"
 date = 2025-01-13
+lastmod = 2025-01-13
 draft = false
 slug = "inequality-in-this-world"
 description = "Personal reflections on the many dimensions of inequality — economic, social, and the often-overlooked gap in access to transformative knowledge."
+tags = ["society", "inequality", "reflections"]
+author = "Vishal Bhoriwal"
 +++
 
 Have you ever stopped to think about how vastly different life can be for people depending simply on where they were born, who their parents are, or even their gender? We live on the same planet, under the same sky, yet the opportunities, resources, and even basic dignities available to us are incredibly, often shockingly, unequal.

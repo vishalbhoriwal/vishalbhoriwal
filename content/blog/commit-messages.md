@@ -1,9 +1,12 @@
 +++
 title = "On Writing Good Commit Messages"
 date = 2024-02-10
+lastmod = 2024-02-10
 draft = false
 slug = "commit-messages"
 description = "A commit message is a letter to your future self. Make it worth reading."
+tags = ["git", "software-engineering", "best-practices"]
+author = "Vishal Bhoriwal"
 +++
 
 A commit message is a letter to your future self. Make it worth reading.

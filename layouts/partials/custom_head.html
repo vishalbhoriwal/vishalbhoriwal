@@ -5,3 +5,19 @@
     --font-scale: 1.15em;
   }
 </style>
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- Author -->
+<meta name="author" content="{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Params.author }}{{ end }}">
+
+<!-- Structured Data (JSON-LD) -->
+{{ partial "structured_data.html" . }}
+
+<!-- Explicit robots directive -->
+{{ if .Params.noindex }}
+<meta name="robots" content="noindex, nofollow">
+{{ else }}
+<meta name="robots" content="index, follow">
+{{ end }}

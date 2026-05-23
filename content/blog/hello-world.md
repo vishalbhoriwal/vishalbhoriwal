@@ -1,9 +1,12 @@
 +++
 title = "Hello World — Starting This Blog"
 date = 2024-01-15
+lastmod = 2024-01-15
 draft = false
 slug = "hello-world"
 description = "Why I decided to start writing publicly and what to expect from this blog."
+tags = ["meta", "writing", "blogging"]
+author = "Vishal Bhoriwal"
 +++
 
 Every blog starts somewhere. This is mine.
