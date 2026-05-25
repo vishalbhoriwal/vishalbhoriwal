@@ -1,7 +1,8 @@
 +++
-title  = "BookShelf"
-menu   = "main"
-weight = 3
+title       = "BookShelf"
+description = "Books I've read, am reading, or want to read."
+menu        = "main"
+weight      = 3
 +++
 
 # BookShelf
