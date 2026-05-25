@@ -10,6 +10,7 @@ disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 
 [params]
+  hideMadeWithLine = true
   favicon         = "/favicon.svg"
   description    = "Thoughts on software, tech and life by Vishal Bhoriwal."
   author         = "Vishal Bhoriwal"

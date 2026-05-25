@@ -13,4 +13,4 @@ This is my corner of the internet where I write about software engineering, tech
 
 ---
 
-Browse my [blog](/blog/) posts, or subscribe via [RSS](/index.xml).
+Browse my [blog](/blog/) posts, or subscribe via [RSS](/index.xml) · [LinkedIn](https://www.linkedin.com/in/vishalbhoriwal) · [YouTube](https://www.youtube.com/@vishalbhoriwal)
