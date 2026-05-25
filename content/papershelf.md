@@ -1,11 +1,11 @@
 +++
-title       = "Paper Shelf"
+title       = "PaperShelf"
 description = "Papers I've read, am reading, or want to read."
 menu        = "main"
 weight      = 4
 +++
 
-# Paper Shelf
+# PaperShelf
 
 Papers I've read, am reading, or want to read.
 
