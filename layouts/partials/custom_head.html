@@ -24,17 +24,6 @@
     --blockquote-color: #222;
   }
 
-  #theme-toggle {
-    background: none;
-    border: 1px solid currentColor;
-    border-radius: 4px;
-    padding: 2px 8px;
-    font-size: 0.9em;
-    color: var(--text-color);
-    cursor: pointer;
-    vertical-align: middle;
-  }
-
   #theme-toggle:hover {
     opacity: 0.7;
   }
@@ -51,19 +40,20 @@
       if (dark) {
         document.body.classList.add('dark-theme');
         document.body.classList.remove('light-theme');
-        btn.textContent = '☀️';
+        btn.textContent = 'Light';
         btn.title = 'Switch to light mode';
       } else {
         document.body.classList.add('light-theme');
         document.body.classList.remove('dark-theme');
-        btn.textContent = '🌙';
+        btn.textContent = 'Dark';
         btn.title = 'Switch to dark mode';
       }
     }
 
     applyTheme(isDark);
 
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
       isDark = !isDark;
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
       applyTheme(isDark);
