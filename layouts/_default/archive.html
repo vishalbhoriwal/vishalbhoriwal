@@ -1,7 +1,7 @@
 {{ define "main" }}
 <h1>Archive</h1>
 
-{{ $posts := where .Site.RegularPages "Type" "blog" }}
+{{ $posts := where .Site.RegularPages "Type" "in" (slice "blog" "papers") }}
 {{ $byYear := $posts.GroupByDate "2006" }}
 
 {{ range $byYear }}
