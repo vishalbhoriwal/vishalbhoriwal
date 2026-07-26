@@ -27,14 +27,52 @@
   #theme-toggle:hover {
     opacity: 0.7;
   }
+
+  /* Code block container (Prism.js handles token colors) */
+  .highlight,
+  pre[class*="language-"] {
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+  pre[class*="language-"] {
+    padding: 0.85em 1em !important;
+    line-height: 1.5;
+    font-size: 0.8em !important;
+  }
+
+  code {
+    background-color: rgba(128, 128, 128, 0.15);
+    font-family: monospace;
+    font-size: 0.85em;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  pre[class*="language-"] code {
+    background-color: transparent !important;
+    padding: 0 !important;
+    font-size: inherit !important;
+  }
 </style>
+
+<!-- Prism.js syntax highlighting (theme swapped by the dark/light toggle below) -->
+<link rel="stylesheet" id="prism-theme"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var btn = document.getElementById('theme-toggle');
+    var prismTheme = document.getElementById('prism-theme');
     var stored = localStorage.getItem('theme');
     var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     var isDark = stored === 'dark' || (!stored && prefersDark);
+
+    var PRISM_DARK = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css';
+    var PRISM_LIGHT = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css';
 
     function applyTheme(dark) {
       if (dark) {
@@ -42,11 +80,13 @@
         document.body.classList.remove('light-theme');
         btn.textContent = 'Light';
         btn.title = 'Switch to light mode';
+        prismTheme.href = PRISM_DARK;
       } else {
         document.body.classList.add('light-theme');
         document.body.classList.remove('dark-theme');
         btn.textContent = 'Dark';
         btn.title = 'Switch to dark mode';
+        prismTheme.href = PRISM_LIGHT;
       }
     }
 

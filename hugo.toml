@@ -22,10 +22,7 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [markup]
   [markup.highlight]
-    style              = 'friendly'
-    lineNos            = false
-    lineNumbersInTable = false
-    codeFences         = true
+    codeFences = false
 
 [sitemap]
   changefreq = "monthly"

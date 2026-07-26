@@ -1,0 +1,78 @@
+<mxfile host="app.diagrams.net" agent="opencode" version="24.7.5">
+  <diagram name="MFE Architecture" id="mfe-architecture">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="Micro Frontend Architecture" style="text;html=1;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="400" y="10" width="400" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- User Browser -->
+        <mxCell id="browser" value="User Browser" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e1e1e;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="520" y="60" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Shell Application -->
+        <mxCell id="shell" value="Shell Application (Host)&#10;— Client-Side Router —" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f1f3f5;strokeColor=#1e1e1e;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="150" width="1040" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- MFE boxes -->
+        <mxCell id="mfe1" value="MFE: Header / Nav&#10;Team A" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e1e1e;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="120" y="320" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mfe2" value="MFE: Dashboard&#10;Team B" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e1e1e;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="360" y="320" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mfe3" value="MFE: Cart / Checkout&#10;Team C" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e1e1e;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="600" y="320" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mfe4" value="MFE: Profile&#10;Team D" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1e1e1e;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="840" y="320" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Shared foundation -->
+        <mxCell id="shared" value="Shared: Design System / Auth / Utilities" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9ecef;strokeColor=#1e1e1e;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="480" width="1040" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Module federation label -->
+        <mxCell id="mf-label" value="loaded via Module Federation at runtime" style="text;html=1;fontSize=11;fontColor=#868e96;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="330" y="255" width="540" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#1e1e1e;" edge="1" parent="1" source="browser" target="shell">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#1e1e1e;" edge="1" parent="1" source="shell" target="mfe1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#1e1e1e;" edge="1" parent="1" source="shell" target="mfe2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#1e1e1e;" edge="1" parent="1" source="shell" target="mfe3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#1e1e1e;" edge="1" parent="1" source="shell" target="mfe4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#868e96;" edge="1" parent="1" source="mfe1" target="shared">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#868e96;" edge="1" parent="1" source="mfe2" target="shared">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#868e96;" edge="1" parent="1" source="mfe3" target="shared">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#868e96;" edge="1" parent="1" source="mfe4" target="shared">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
