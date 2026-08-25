@@ -76,14 +76,14 @@
   }
 
   /* ---------- Wrappers ---------- */
-  .gh-outer { padding: 0 4vw; }
+  .gh-outer { padding: 0 max(20px, 4vw); }
   .gh-inner { max-width: var(--wide); margin: 0 auto; }
-  .site-wrap { max-width: var(--width); margin: 0 auto; padding: 0 4vw; }
+  .site-wrap { max-width: var(--width); margin: 0 auto; padding: 0 max(20px, 4vw); }
   .site-wrap--post { max-width: var(--post-width); }
   main { min-height: 50vh; }
 
   /* ---------- Header (full width) ---------- */
-  .gh-head { padding: 26px 0; }
+  .gh-head { padding-top: 26px; padding-bottom: 26px; }
   .gh-head-inner {
     display: flex; align-items: center; gap: 30px;
   }
@@ -137,7 +137,7 @@
   main { line-height: 1.7; }
 
   /* ---------- Featured ---------- */
-  .featured-wrapper { padding: 40px 0 10px; }
+  .featured-wrapper { padding-top: 40px; padding-bottom: 10px; }
   .featured-head {
     display: flex; align-items: center; justify-content: space-between;
     border-bottom: 1px solid var(--border-color); padding-bottom: 14px;
@@ -196,7 +196,7 @@
   /* ---------- Footer ---------- */
   footer.gh-foot {
     border-top: 1px solid var(--border-color);
-    margin-top: 50px; padding: 40px 0;
+    margin-top: 50px; padding-top: 40px; padding-bottom: 40px;
     color: var(--muted-color); font-size: 0.82em;
   }
   .gh-foot-inner {
@@ -220,13 +220,35 @@
   }
   .highlight pre, .code pre { max-width: 100%; overflow-x: auto; }
 
+  /* Copy button on code blocks */
+  pre.has-copy { position: relative; }
+  .copy-btn {
+    position: absolute; top: 8px; right: 8px;
+    padding: 4px 10px; font-size: 12px; font-weight: 600;
+    font-family: var(--font-main);
+    color: var(--text-color); background: var(--background-color);
+    border: 1px solid var(--border-color); border-radius: 4px;
+    cursor: pointer; opacity: 0; transition: opacity 0.15s ease, background 0.15s ease;
+    line-height: 1;
+  }
+  pre.has-copy:hover .copy-btn,
+  .copy-btn:focus { opacity: 0.95; }
+  .copy-btn:hover { border-color: var(--muted-color); }
+  .copy-btn.copied {
+    color: #fff; background: var(--accent); border-color: var(--accent); opacity: 1;
+  }
+  @media (hover: none) {
+    .copy-btn { opacity: 1; }
+  }
+
   @media (max-width: 900px) {
     .featured-feed { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   }
 
   @media (max-width: 700px) {
     :root { --font-scale: 1em; }
-    .gh-head { padding: 18px 0; }
+    .gh-outer, .site-wrap { padding-left: 22px; padding-right: 22px; }
+    .gh-head { padding-top: 18px; padding-bottom: 18px; }
     .gh-head-inner { flex-wrap: wrap; gap: 16px; }
     .gh-head-logo { font-size: 1.35em; }
     .gh-burger { display: inline-flex; }
@@ -246,7 +268,7 @@
     .cover-description { font-size: 1.1em; }
     .cover-cta { flex-wrap: wrap; }
 
-    .featured-wrapper { padding: 28px 0 6px; }
+    .featured-wrapper { padding-top: 28px; padding-bottom: 6px; }
     .featured-feed { grid-template-columns: 1fr; gap: 26px; margin-top: 24px; }
     .featured .featured-img { aspect-ratio: 16/9; }
 
