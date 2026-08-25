@@ -7,6 +7,7 @@ slug = "hello-world"
 description = "Why I decided to start writing publicly and what to expect from this blog."
 tags = ["meta", "writing", "blogging"]
 author = "Vishal Bhoriwal"
+cover = "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80&fit=crop"
 +++
 
 Every blog starts somewhere. This is mine.

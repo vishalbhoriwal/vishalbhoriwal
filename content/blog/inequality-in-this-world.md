@@ -43,8 +43,6 @@ For me, this isn't just an abstract concept. It feels fundamentally unfair. Ther
 
 I see glimpses of these contrasts daily. Rapid development alongside persistent poverty, access to world-class amenities for some, while others struggle for basics. It makes me question what 'progress' really means if it leaves so many behind. It fosters empathy, but also a sense of frustration and a desire for things to be different.
 
-![A stray dog sitting on uneven cobblestones at night, a quiet symbol of lives on the margins](/images/inequality-dog.jpg)
-
 ---
 
 ## What Can We Even Do?

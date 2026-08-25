@@ -7,6 +7,7 @@ slug = "commit-messages"
 description = "A commit message is a letter to your future self. Make it worth reading."
 tags = ["git", "software-engineering", "best-practices"]
 author = "Vishal Bhoriwal"
+cover = "https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?w=1200&q=80&fit=crop"
 +++
 
 A commit message is a letter to your future self. Make it worth reading.

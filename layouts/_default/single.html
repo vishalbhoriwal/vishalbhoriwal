@@ -9,6 +9,13 @@
       {{ with .ReadingTime }} &middot; {{ . }} min read{{ end }}
     </div>
   </div>
+
+  {{ $img := "" }}
+  {{ with .Params.images }}{{ $img = index . 0 }}{{ end }}
+  {{ with .Params.cover }}{{ $img = . }}{{ end }}
+  {{ with $img }}
+  <img class="post-cover" src="{{ . | relURL }}" alt="{{ $.Title }}">
+  {{ end }}
   {{ end }}
 
   <content>

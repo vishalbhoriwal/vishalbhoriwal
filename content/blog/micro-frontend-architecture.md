@@ -8,6 +8,7 @@ description = "How to break up a frontend monolith, what it buys you, and what i
 tags = ["architecture", "frontend", "javascript", "software-engineering"]
 featured = true
 author = "Vishal Bhoriwal"
+cover = "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80&fit=crop"
 +++
 
 How to break up a frontend monolith, what it buys you, and what it costs.

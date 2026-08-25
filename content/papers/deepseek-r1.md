@@ -7,6 +7,7 @@ slug        = "deepseek-r1"
 description = "Notes on DeepSeek-R1, a paper on training reasoning capabilities in LLMs using reinforcement learning."
 tags        = ["LLM", "reinforcement-learning", "reasoning"]
 link        = "https://arxiv.org/abs/2501.12948"
+cover       = "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80&fit=crop"
 +++
 
 **Link:** [arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948)
