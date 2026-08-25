@@ -3,8 +3,9 @@
     --width: 800px;
     --post-width: 820px;
     --wide: 1200px;
-    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    --font-secondary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-secondary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-reading: "Lora", Georgia, "Times New Roman", serif;
     --font-scale: 1.05em;
     --accent: #ff572f;
     --background-color: #fff;
@@ -91,13 +92,15 @@
     font-family: var(--font-main);
     font-weight: 800; font-size: 1.55em;
     letter-spacing: -0.03em; color: var(--heading-color);
+    flex: 1;
   }
   .gh-head-logo:hover { color: var(--heading-color); }
-  .gh-head-menu { display: flex; align-items: center; justify-content: center; gap: 30px; flex: 1; }
-  .gh-head-menu a { color: var(--heading-color); font-size: 0.82em; font-weight: 500; }
+  .gh-head-menu { display: flex; align-items: center; justify-content: center; gap: 30px; flex: 0 0 auto; }
+  .gh-head-actions { display: flex; align-items: center; gap: 22px; flex: 1; justify-content: flex-end; }
+  .gh-head-menu a { color: var(--heading-color); font-size: 0.95em; font-weight: 500; }
   .gh-head-menu a:hover { color: var(--accent); }
   .gh-head-actions { display: flex; align-items: center; gap: 22px; }
-  .gh-head-actions a { color: var(--heading-color); font-size: 0.82em; font-weight: 500; }
+  .gh-head-actions a { color: var(--heading-color); font-size: 0.95em; font-weight: 500; }
   .gh-head-actions a:hover { color: var(--accent); }
   .gh-icon-btn {
     background: none; border: none; padding: 0; color: var(--heading-color);
@@ -108,7 +111,7 @@
   /* sun/moon toggle: show moon in light mode, sun in dark mode */
   body.light-theme .icon-sun { display: none; }
   body.dark-theme .icon-moon { display: none; }
-  #theme-toggle { font-size: 0.82em; font-weight: 500; }
+  #theme-toggle { font-size: 0.95em; font-weight: 500; }
 
   /* ---------- Cover / hero ---------- */
   .cover { padding: 55px 0 30px; text-align: center; }
@@ -133,6 +136,14 @@
 
   /* ---------- Prose (home markdown / posts) ---------- */
   .prose { padding-top: 40px; padding-bottom: 20px; }
+
+  /* Comfortable serif reading for article body */
+  .prose content {
+    font-family: var(--font-reading);
+    font-size: 1.12em;
+    line-height: 1.75;
+  }
+  .prose content code, .prose content pre { font-family: monospace; }
   .prose h1 { font-size: 2.3em; margin-bottom: 0.3em; }
   main { line-height: 1.7; }
 
@@ -207,7 +218,7 @@
   .gh-social-links { display: flex; gap: 16px; }
   .gh-social-links a { color: var(--heading-color); display: inline-flex; }
   .gh-social-links a:hover { color: var(--accent); }
-  .gh-foot-menu { display: flex; gap: 8px; }
+  .gh-foot-menu { display: flex; gap: 8px; justify-content: flex-end; }
   .gh-foot-menu a { color: var(--muted-color); }
   .gh-foot-menu a:hover { color: var(--accent); }
   .gh-powered-by { text-align: right; }
@@ -286,5 +297,6 @@
 
     .gh-foot-inner { grid-template-columns: 1fr; gap: 18px; text-align: center; }
     .gh-copyright, .gh-powered-by { text-align: center; }
+    .gh-foot-menu { justify-content: center; }
   }
 </style>
