@@ -14,7 +14,19 @@
   {{ with .Params.images }}{{ $img = index . 0 }}{{ end }}
   {{ with .Params.cover }}{{ $img = . }}{{ end }}
   {{ with $img }}
-  <img class="post-cover" src="{{ . | relURL }}" alt="{{ $.Title }}">
+  {{ $u := . | relURL }}
+  {{ if hasPrefix . "https://images.unsplash.com/" }}
+    {{ $base := index (split . "?") 0 }}
+    {{ $src := printf "%s?w=768&q=70&fm=webp&fit=crop" $base }}
+    {{ $srcset := printf "%s?w=768&q=70&fm=webp&fit=crop 768w, %s?w=1024&q=70&fm=webp&fit=crop 1024w, %s?w=1400&q=70&fm=webp&fit=crop 1400w" $base $base $base }}
+  <img class="post-cover" src="{{ $src }}" srcset="{{ $srcset }}"
+    sizes="(max-width: 768px) 100vw, 700px"
+    width="700" height="350" alt="{{ $.Title }}"
+    fetchpriority="high" decoding="async">
+  {{ else }}
+  <img class="post-cover" src="{{ $u }}" width="700" height="350" alt="{{ $.Title }}"
+    fetchpriority="high" decoding="async">
+  {{ end }}
   {{ end }}
   {{ end }}
 

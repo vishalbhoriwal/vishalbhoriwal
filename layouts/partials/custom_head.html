@@ -61,7 +61,8 @@
 
 <!-- Prism.js syntax highlighting (theme swapped by the dark/light toggle below) -->
 <link rel="stylesheet" id="prism-theme"
-  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+  media="print" onload="this.media='all'">
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -75,6 +76,7 @@
     var PRISM_LIGHT = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css';
 
     function applyTheme(dark) {
+      prismTheme.media = 'all';
       if (dark) {
         document.body.classList.add('dark-theme');
         document.body.classList.remove('light-theme');
