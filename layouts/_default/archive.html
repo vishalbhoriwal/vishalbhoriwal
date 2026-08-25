@@ -1,4 +1,6 @@
 {{ define "main" }}
+<div class="site-wrap">
+<div class="prose">
 <h1>Archive</h1>
 
 {{ $posts := where .Site.RegularPages "Type" "in" (slice "blog" "papers") }}
@@ -16,4 +18,6 @@
   {{ end }}
 </ul>
 {{ end }}
+</div>
+</div>
 {{ end }}

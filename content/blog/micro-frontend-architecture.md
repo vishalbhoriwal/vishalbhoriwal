@@ -6,6 +6,7 @@ draft = false
 slug = "micro-frontend-architecture"
 description = "How to break up a frontend monolith, what it buys you, and what it costs."
 tags = ["architecture", "frontend", "javascript", "software-engineering"]
+featured = true
 author = "Vishal Bhoriwal"
 +++
 

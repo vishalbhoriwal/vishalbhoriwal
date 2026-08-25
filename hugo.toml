@@ -1,7 +1,6 @@
 baseURL = 'https://www.vishalbhoriwal.me/'
 title    = "Vishal Bhoriwal"
 author   = "Vishal Bhoriwal"
-theme    = 'hugo-bearblog'
 
 enableRobotsTXT = true
 
@@ -16,6 +15,8 @@ ignoreErrors = ["error-disable-taxonomy"]
   author         = "Vishal Bhoriwal"
   dateFormat     = "2006-01-02"
   enablePostNavigator = true
+  linkedin       = "https://www.linkedin.com/in/vishalbhoriwal"
+  github         = "https://github.com/vishalbhoriwal"
 
   # SEO / Social
   images         = ["/images/og-default.png"]

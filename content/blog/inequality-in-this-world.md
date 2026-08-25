@@ -6,6 +6,7 @@ draft = false
 slug = "inequality-in-this-world"
 description = "Personal reflections on the many dimensions of inequality — economic, social, and the often-overlooked gap in access to transformative knowledge."
 tags = ["society", "inequality", "reflections"]
+featured = true
 author = "Vishal Bhoriwal"
 images = ["/images/inequality-dog.jpg"]
 +++

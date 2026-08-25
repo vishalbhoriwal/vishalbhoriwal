@@ -6,6 +6,7 @@ draft = false
 slug = "simplicity"
 description = "A reminder to reach for complexity only when simplicity has genuinely failed."
 tags = ["software-engineering", "design", "engineering-philosophy"]
+featured = true
 author = "Vishal Bhoriwal"
 +++
 

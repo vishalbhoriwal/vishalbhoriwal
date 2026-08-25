@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+<html lang="{{ with .Site.Language.Locale }}{{ . }}{{ else }}en-US{{ end }}">
 
 <head>
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
@@ -20,18 +20,20 @@
 </head>
 
 <body>
-  <header class="gh-head">
-    {{- partial "header.html" . -}}
+  <header class="gh-head gh-outer">
+    <div class="gh-inner">
+      {{- partial "header.html" . -}}
+    </div>
   </header>
 
   <main>
-    <div class="site-wrap">
-      {{- block "main" . }}{{- end }}
-    </div>
+    {{- block "main" . }}{{- end }}
   </main>
 
-  <footer class="gh-foot">
-    {{- partial "footer.html" . -}}
+  <footer class="gh-foot gh-outer">
+    <div class="gh-inner">
+      {{- partial "footer.html" . -}}
+    </div>
   </footer>
 
   {{- partial "custom_body.html" . -}}

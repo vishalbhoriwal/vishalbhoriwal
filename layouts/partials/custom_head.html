@@ -1,27 +1,27 @@
 <style>
-  :root {
-    --font-main: monospace;
-    --font-secondary: monospace;
-    --font-scale: 1.15em;
+  #theme-toggle:hover {
+    opacity: 0.7;
   }
-
-  /* Dark theme override class */
   body.dark-theme {
-    --background-color: #01242e;
-    --heading-color: #eee;
-    --text-color: #ddd;
-    --link-color: #8cc2dd;
-    --visited-color: #8b6fcb;
-    --blockquote-color: #ccc;
+    --background-color: #15171a;
+    --heading-color: #ffffff;
+    --text-color: #c5d2d9;
+    --muted-color: #7c8b93;
+    --border-color: #2b2f33;
+    --link-color: #ffffff;
+    --visited-color: #ffffff;
+    --blockquote-color: #ffffff;
   }
 
   body.light-theme {
     --background-color: #fff;
-    --heading-color: #222;
-    --text-color: #444;
-    --link-color: #3273dc;
-    --visited-color: #8b6fcb;
-    --blockquote-color: #222;
+    --heading-color: #15171a;
+    --text-color: #394047;
+    --muted-color: #738a94;
+    --border-color: #eaeef0;
+    --link-color: #15171a;
+    --visited-color: #15171a;
+    --blockquote-color: #15171a;
   }
 
   #theme-toggle:hover {
@@ -78,13 +78,11 @@
       if (dark) {
         document.body.classList.add('dark-theme');
         document.body.classList.remove('light-theme');
-        btn.textContent = 'Light';
         btn.title = 'Switch to light mode';
         prismTheme.href = PRISM_DARK;
       } else {
         document.body.classList.add('light-theme');
         document.body.classList.remove('dark-theme');
-        btn.textContent = 'Dark';
         btn.title = 'Switch to dark mode';
         prismTheme.href = PRISM_LIGHT;
       }
