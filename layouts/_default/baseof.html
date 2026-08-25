@@ -16,27 +16,24 @@
   {{ end -}}
 
   {{- partial "style.html" . -}}
-
-  <!-- A partial to be overwritten by the user.
-  Simply place a custom_head.html into
-  your local /layouts/partials-directory -->
   {{- partial "custom_head.html" . -}}
 </head>
 
 <body>
-  <header>
+  <header class="gh-head">
     {{- partial "header.html" . -}}
   </header>
+
   <main>
-    {{- block "main" . }}{{- end }}
+    <div class="site-wrap">
+      {{- block "main" . }}{{- end }}
+    </div>
   </main>
-  <footer>
+
+  <footer class="gh-foot">
     {{- partial "footer.html" . -}}
   </footer>
 
-  <!-- A partial to be overwritten by the user.
-  Simply place a custom_body.html into
-  your local /layouts/partials-directory -->
   {{- partial "custom_body.html" . -}}
 </body>
 
